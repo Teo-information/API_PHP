@@ -1,11 +1,9 @@
 <?php
-$config = require_once 'config.php';
-
-$host = $config['db']['host'];
-$dbname = $config['db']['name'];
-$username = $config['db']['user'];
-$password = $config['db']['pass'];
-$port = $config['db']['port'];
+$host = getenv('DB_HOST') ?: 'mainline.proxy.rlwy.net';
+$dbname = getenv('DB_NAME') ?: 'railway';
+$username = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASS') ?: 'XPxgBOZFnQnMCVvLyDhruxubLBTucnDE';
+$port = getenv('DB_PORT') ?: '33034';
 
 try {
     $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
