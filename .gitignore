@@ -1,0 +1,19 @@
+# Archivos de configuración
+config/config.php
+
+# Archivos de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Archivos de logs
+*.log 

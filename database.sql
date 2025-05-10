@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS sistema_notas;
+USE sistema_notas;
+
+CREATE TABLE IF NOT EXISTS notas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_alumno VARCHAR(100) NOT NULL,
+    materia VARCHAR(100) NOT NULL,
+    nota DECIMAL(5,2) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
